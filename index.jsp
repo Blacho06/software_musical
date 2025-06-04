@@ -462,6 +462,33 @@
     </style>
 </head>
 <body>
+    
+    <%
+    if (isLoggedIn && request.getParameter("section") != null) {
+        String section = request.getParameter("section");
+        switch (section) {
+            case "catalogo":
+                request.getRequestDispatcher("catalogo.jsp").forward(request, response);
+                return;
+            case "carrito":
+                request.getRequestDispatcher("carrito.jsp").forward(request, response);
+                return;
+            case "inventario":
+                request.getRequestDispatcher("inventario.jsp").forward(request, response);
+                return;
+            case "ventas":
+                request.getRequestDispatcher("ventas.jsp").forward(request, response);
+                return;
+            case "reportes":
+                request.getRequestDispatcher("reportes.jsp").forward(request, response);
+                return;
+            case "usuarios":
+                request.getRequestDispatcher("usuarios.jsp").forward(request, response);
+                return;
+        }
+    }
+%>
+
     <% if (!isLoggedIn) { %>
         <!-- Pantalla de Login -->
         <div class="login-container">
