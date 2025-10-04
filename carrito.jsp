@@ -14,6 +14,7 @@
         private String imagen;
         private int stockDisponible;
         
+
         public ItemCarrito(int instrumentoId, String nombre, String marca, String modelo, 
                           double precio, int cantidad, String imagen, int stockDisponible) {
             this.instrumentoId = instrumentoId;
