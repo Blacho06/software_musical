@@ -8,6 +8,7 @@
             width: 90%;
             margin: 20px auto;
             border-collapse: collapse;
+
         }
         th, td {
             padding: 10px;
